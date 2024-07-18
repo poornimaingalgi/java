@@ -1,21 +1,12 @@
 class BillRunner{
-public static void main(String[] amount){
-Bill bill=new Bill();
-bill.billId=100;
-bill. billIssueDate="18/07/2024";
-bill.billDueDate="22/07/2024";
-bill.isBillPaid=false;
-bill.isBillDue=true;
-System.out.println("the bill id is:" + bill.billId);
-System.out.println("the bill is due,last date is:" + bill.billDueDate);
-
-Bill bill2=new Bill();
-bill2.billId=120;
-bill2.billIssueDate="28/06/2024";
-bill2.billDueDate="02/07/2024";
-bill2.isBillPaid=true;
-bill2.isBillDue=false;
-System.out.println("the bill id is:" + bill2.billId);
-System.out.println("the bill is paid:" + bill2.isBillDue);
-}
+	public static void main(String[] amount){
+		Bill ref=new Bill();
+		boolean bill=ref.createBill(100,"17/07/2024","20/07/2024",false,true);
+		System.out.println(bill);
+		ref.displayBillInfo();
+		
+		boolean bill1=ref.createBill(110,"17/08/2024","20/08/2024",false,false);
+		System.out.println(bill1);
+		ref.displayBillInfo();
+	}
 }
